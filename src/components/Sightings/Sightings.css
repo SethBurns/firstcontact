@@ -1,0 +1,31 @@
+.sighting {
+  border-style: solid;
+  width: 45vw;
+  margin: 10px;
+}
+
+.sightings-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  margin: 5px;
+  border-radius: 5px;
+  -webkit-transition: background-color 1s ease-in-out;
+  -moz-transition: background-color 1s ease-in-out;
+  -o-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(186, 24, 24);
+}
+
+#submit:hover {
+  background-color: rgb(6, 160, 60);
+  border-color: whitesmoke;
+}
+

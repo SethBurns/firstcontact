@@ -1,0 +1,19 @@
+input {
+  text-align: center;
+  width: 50vw;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 10px;
+}
+
+textarea {
+  text-align: center;
+}

@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { Form } from './components/Form/Form';
+import { Sightings } from './components/Sightings/Sightings';
+import { fetchSightings } from './apiCalls';
+
+
 
 function App() {
+
+  const [sightings, setSightings] = useState([])
+
+  useEffect(() => {
+    fetchSightings().then(data => {
+      setSightings(data)
+    })
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='title'>First Contact</h1>
+      <Form setSightings={setSightings} sightings={sightings} />
+      <Sightings setSightings={setSightings} sightings={sightings} />
     </div>
   );
 }
